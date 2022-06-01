@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9DAE6"
+    tools:context=".ui.expense.AddExpense">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ictu_logo" />
+
+    <ImageButton
+        android:id="@+id/imgBtnAExpense"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#D9DAE6"
+        android:onClick="Cancel"
+        android:src="@drawable/cancel" />
+
+    <TextView
+        android:id="@+id/txtTitleAddExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgBtnAExpense"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="THÔNG TIN KHOẢN CHI"
+        android:textColor="@color/chinh"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitleAddExpense"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nội dung khoản chi:"
+            android:textColor="@color/chinh"
+            android:textSize="20dp" />
+
+
+        <EditText
+            android:id="@+id/edtContentExpense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/box_custom_2"
+            android:gravity="top"
+            android:hint="Nhập nội dung..."
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Ngày chi:"
+            android:textColor="@color/chinh"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp">
+
+            <EditText
+                android:id="@+id/edtDateExpense"
+                android:onClick="PickDateExpense"
+                android:layout_width="230dp"
+                android:layout_height="50dp"
+                android:background="@drawable/box_custom_2"
+                android:hint="01/01/2021"
+                android:inputType="date"
+                android:maxLength="10"
+                android:paddingLeft="16dp"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:cursorVisible="false"
+                android:focusable="false"/>
+
+            <ImageButton
+                android:id="@+id/btnCalenderExpense"
+                android:onClick="PickDateExpense"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignRight="@+id/edtDateExpense"
+                android:backgroundTint="#A8FFFFFF"
+                android:clickable="true"
+                android:src="@drawable/calender" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Số tiền chi:"
+            android:textColor="@color/chinh"
+            android:textSize="20dp" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp">
+
+            <EditText
+                android:id="@+id/edtMoneyExpense"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:background="@drawable/box_custom_2"
+                android:hint="1.000.000"
+                android:inputType="numberDecimal"
+                android:maxLength="13"
+                android:paddingLeft="16dp"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/edtMoneyExpense"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="VNĐ"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button_custom_1"
+        android:onClick="Done"
+        android:paddingHorizontal="10dp"
+        android:text="Hoàn thành"
+        android:textColor="@color/chinh"
+        android:textSize="20dp" />
+
+</RelativeLayout>

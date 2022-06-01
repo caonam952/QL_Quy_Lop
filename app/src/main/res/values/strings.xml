@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quản Lý Quỹ Lớp</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_income">Đóng góp</string>
+    <string name="title_expense">Chi tiền</string>
+    <string name="title_sv">Thành viên</string>
+</resources>

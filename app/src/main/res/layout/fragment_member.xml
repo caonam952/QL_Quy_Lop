@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="16dp"
+    tools:context=".ui.member.Member">
+
+    <TextView
+        android:id="@+id/txtTitleMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="28dp"
+        android:text="THÀNH VIÊN"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textColor="@color/chinh"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/txtHeader"
+        android:layout_below="@+id/txtTitleMember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7CDCD90F"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:background="@drawable/box_custom_4"
+            android:text="STT"
+            android:textColor="@color/chinh"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:background="@drawable/box_custom_4"
+            android:text="Họ tên"
+            android:textColor="@color/chinh"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:background="@drawable/box_custom_4"
+            android:textColor="@color/chinh"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lsvMember"
+        android:layout_below="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="85dp" />
+
+    <Button
+        android:id="@+id/btnDeleteMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="16dp"
+        android:text="Xóa"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/chinh" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/chinh"
+            android:src="@drawable/add_white_48dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    tools:context=".ui.income.Income">
+
+    <TextView
+        android:id="@+id/txtTitleIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="28dp"
+        android:text="ĐÓNG GÓP"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textColor="@color/chinh"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/rlSpinnerIncome"
+        android:layout_width="105dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/txtTitleIncome"
+        android:background="@drawable/box_custom">
+
+        <Spinner
+            android:id="@+id/spnIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vKe1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/chinh"
+        android:layout_below="@+id/rlSpinnerIncome"/>
+
+    <ListView
+        android:id="@+id/lsvIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vKe1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/chinh"
+            android:src="@drawable/add_white_48dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
